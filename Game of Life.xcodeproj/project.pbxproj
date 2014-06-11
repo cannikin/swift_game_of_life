@@ -25,6 +25,7 @@
 		D40E2C821948FE1E00EF7558 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C771948FE1E00EF7558 /* pause.png */; };
 		D40E2C831948FE1E00EF7558 /* play-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C781948FE1E00EF7558 /* play-pressed.png */; };
 		D40E2C841948FE1E00EF7558 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C791948FE1E00EF7558 /* play.png */; };
+		D4FC78F11949056C0034036A /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FC78F01949056C0034036A /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D40E2C771948FE1E00EF7558 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		D40E2C781948FE1E00EF7558 /* play-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-pressed.png"; sourceTree = "<group>"; };
 		D40E2C791948FE1E00EF7558 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		D4FC78F01949056C0034036A /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				D40E2C4A1948FD4E00EF7558 /* AppDelegate.swift */,
 				D40E2C4C1948FD4E00EF7558 /* GameScene.sks */,
 				D40E2C4E1948FD4E00EF7558 /* GameScene.swift */,
+				D4FC78F01949056C0034036A /* Tile.swift */,
 				D40E2C501948FD4E00EF7558 /* GameViewController.swift */,
 				D40E2C521948FD4E00EF7558 /* Main.storyboard */,
 				D40E2C551948FD4E00EF7558 /* Images.xcassets */,
@@ -294,6 +297,7 @@
 				D40E2C4F1948FD4E00EF7558 /* GameScene.swift in Sources */,
 				D40E2C511948FD4E00EF7558 /* GameViewController.swift in Sources */,
 				D40E2C4B1948FD4E00EF7558 /* AppDelegate.swift in Sources */,
+				D4FC78F11949056C0034036A /* Tile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +485,7 @@
 				D40E2C671948FD4E00EF7558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D40E2C681948FD4E00EF7558 /* Build configuration list for PBXNativeTarget "Game of LifeTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				D40E2C6A1948FD4E00EF7558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

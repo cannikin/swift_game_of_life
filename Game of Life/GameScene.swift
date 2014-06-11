@@ -23,7 +23,7 @@ class GameScene: SKScene {
   var _playButton = SKSpriteNode(imageNamed: "play.png")
   var _pauseButton = SKSpriteNode(imageNamed: "pause.png")
   
-  var _tiles:SKSpriteNode[][] = []
+  var _tiles:Tile[][] = []
   var _margin = 4
     
   override func didMoveToView(view: SKView) {
@@ -92,9 +92,10 @@ class GameScene: SKScene {
     
     let tileSize = calculateTileSize()
     for r in 0.._numRows {
-      var tileRow:SKSpriteNode[] = []
+      var tileRow:Tile[] = []
       for c in 0.._numCols {
-        let tile = SKSpriteNode(imageNamed: "bubble.png")
+        let tile = Tile(imageNamed: "bubble.png")
+        tile.isAlive = false
         tile.size = CGSize(width: tileSize.width, height: tileSize.height)
         tile.anchorPoint = CGPoint(x: 0, y: 0)
         tile.position = getTilePosition(row: r, column: c)
@@ -107,6 +108,12 @@ class GameScene: SKScene {
   }
     
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    for touch: AnyObject in touches {
+      var selectedTile:Tile? = getTileAtPosition(xPos: Int(touch.locationInNode(self).x), yPos: Int(touch.locationInNode(self).y))
+      if let tile = selectedTile {
+        tile.isAlive = !tile.isAlive
+      }
+    }
   }
    
   override func update(currentTime: CFTimeInterval) {
@@ -124,6 +131,20 @@ class GameScene: SKScene {
     let x = Int(_gridLowerLeftCorner.x) + _margin + (c * (Int(tileSize.width) + _margin))
     let y = Int(_gridLowerLeftCorner.y) + _margin + (r * (Int(tileSize.height) + _margin))
     return CGPoint(x: x, y: y)
+  }
+  
+  func isValidTile(row r: Int, column c:Int) -> Bool {
+    return r >= 0 && r < _numRows && c >= 0 && c < _numCols
+  }
+  
+  func getTileAtPosition(xPos x: Int, yPos y: Int) -> Tile? {
+    let r:Int = Int(CGFloat(y - (Int(_gridLowerLeftCorner.y) + _margin)) / CGFloat(_gridHeight) * CGFloat(_numRows))
+    let c:Int = Int(CGFloat(x - (Int(_gridLowerLeftCorner.x) + _margin)) / CGFloat(_gridWidth) * CGFloat(_numCols))
+    if isValidTile(row: r, column: c) {
+      return _tiles[r][c]
+    } else {
+      return nil
+    }
   }
   
 }
