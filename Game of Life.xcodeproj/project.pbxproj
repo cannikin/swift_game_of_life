@@ -14,6 +14,17 @@
 		D40E2C541948FD4E00EF7558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C521948FD4E00EF7558 /* Main.storyboard */; };
 		D40E2C561948FD4E00EF7558 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C551948FD4E00EF7558 /* Images.xcassets */; };
 		D40E2C621948FD4E00EF7558 /* Game_of_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E2C611948FD4E00EF7558 /* Game_of_LifeTests.swift */; };
+		D40E2C7A1948FE1E00EF7558 /* balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C6D1948FE1E00EF7558 /* balloon.png */; };
+		D40E2C7B1948FE1E00EF7558 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C6E1948FE1E00EF7558 /* bubble.png */; };
+		D40E2C7C1948FE1E00EF7558 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C6F1948FE1E00EF7558 /* grid.png */; };
+		D40E2C7D1948FE1E00EF7558 /* microscope.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C701948FE1E00EF7558 /* microscope.png */; };
+		D40E2C7E1948FE1E00EF7558 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C721948FE1E00EF7558 /* background.png */; };
+		D40E2C7F1948FE1E00EF7558 /* button-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C741948FE1E00EF7558 /* button-pressed.png */; };
+		D40E2C801948FE1E00EF7558 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C751948FE1E00EF7558 /* button.png */; };
+		D40E2C811948FE1E00EF7558 /* pause-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C761948FE1E00EF7558 /* pause-pressed.png */; };
+		D40E2C821948FE1E00EF7558 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C771948FE1E00EF7558 /* pause.png */; };
+		D40E2C831948FE1E00EF7558 /* play-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C781948FE1E00EF7558 /* play-pressed.png */; };
+		D40E2C841948FE1E00EF7558 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = D40E2C791948FE1E00EF7558 /* play.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +42,24 @@
 		D40E2C491948FD4E00EF7558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40E2C4A1948FD4E00EF7558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40E2C4C1948FD4E00EF7558 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		D40E2C4E1948FD4E00EF7558 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D40E2C4E1948FD4E00EF7558 /* GameScene.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; tabWidth = 2; };
 		D40E2C501948FD4E00EF7558 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D40E2C531948FD4E00EF7558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D40E2C551948FD4E00EF7558 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D40E2C5B1948FD4E00EF7558 /* Game of LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40E2C601948FD4E00EF7558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D40E2C611948FD4E00EF7558 /* Game_of_LifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_of_LifeTests.swift; sourceTree = "<group>"; };
+		D40E2C6D1948FE1E00EF7558 /* balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balloon.png; sourceTree = "<group>"; };
+		D40E2C6E1948FE1E00EF7558 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		D40E2C6F1948FE1E00EF7558 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		D40E2C701948FE1E00EF7558 /* microscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microscope.png; sourceTree = "<group>"; };
+		D40E2C721948FE1E00EF7558 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		D40E2C741948FE1E00EF7558 /* button-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-pressed.png"; sourceTree = "<group>"; };
+		D40E2C751948FE1E00EF7558 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		D40E2C761948FE1E00EF7558 /* pause-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-pressed.png"; sourceTree = "<group>"; };
+		D40E2C771948FE1E00EF7558 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		D40E2C781948FE1E00EF7558 /* play-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-pressed.png"; sourceTree = "<group>"; };
+		D40E2C791948FE1E00EF7558 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +86,7 @@
 				D40E2C471948FD4D00EF7558 /* Game of Life */,
 				D40E2C5E1948FD4E00EF7558 /* Game of LifeTests */,
 				D40E2C461948FD4D00EF7558 /* Products */,
+				D40E2C6B1948FE1E00EF7558 /* GameOfLifeAssets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +136,48 @@
 				D40E2C601948FD4E00EF7558 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D40E2C6B1948FE1E00EF7558 /* GameOfLifeAssets */ = {
+			isa = PBXGroup;
+			children = (
+				D40E2C6C1948FE1E00EF7558 /* Assets */,
+				D40E2C711948FE1E00EF7558 /* BackgroundImage */,
+				D40E2C731948FE1E00EF7558 /* Buttons */,
+			);
+			path = GameOfLifeAssets;
+			sourceTree = "<group>";
+		};
+		D40E2C6C1948FE1E00EF7558 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D40E2C6D1948FE1E00EF7558 /* balloon.png */,
+				D40E2C6E1948FE1E00EF7558 /* bubble.png */,
+				D40E2C6F1948FE1E00EF7558 /* grid.png */,
+				D40E2C701948FE1E00EF7558 /* microscope.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D40E2C711948FE1E00EF7558 /* BackgroundImage */ = {
+			isa = PBXGroup;
+			children = (
+				D40E2C721948FE1E00EF7558 /* background.png */,
+			);
+			path = BackgroundImage;
+			sourceTree = "<group>";
+		};
+		D40E2C731948FE1E00EF7558 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D40E2C741948FE1E00EF7558 /* button-pressed.png */,
+				D40E2C751948FE1E00EF7558 /* button.png */,
+				D40E2C761948FE1E00EF7558 /* pause-pressed.png */,
+				D40E2C771948FE1E00EF7558 /* pause.png */,
+				D40E2C781948FE1E00EF7558 /* play-pressed.png */,
+				D40E2C791948FE1E00EF7558 /* play.png */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +261,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40E2C561948FD4E00EF7558 /* Images.xcassets in Resources */,
+				D40E2C811948FE1E00EF7558 /* pause-pressed.png in Resources */,
+				D40E2C821948FE1E00EF7558 /* pause.png in Resources */,
+				D40E2C801948FE1E00EF7558 /* button.png in Resources */,
+				D40E2C831948FE1E00EF7558 /* play-pressed.png in Resources */,
+				D40E2C7E1948FE1E00EF7558 /* background.png in Resources */,
+				D40E2C7A1948FE1E00EF7558 /* balloon.png in Resources */,
+				D40E2C841948FE1E00EF7558 /* play.png in Resources */,
+				D40E2C7D1948FE1E00EF7558 /* microscope.png in Resources */,
+				D40E2C7B1948FE1E00EF7558 /* bubble.png in Resources */,
 				D40E2C4D1948FD4E00EF7558 /* GameScene.sks in Resources */,
 				D40E2C541948FD4E00EF7558 /* Main.storyboard in Resources */,
+				D40E2C7F1948FE1E00EF7558 /* button-pressed.png in Resources */,
+				D40E2C7C1948FE1E00EF7558 /* grid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
