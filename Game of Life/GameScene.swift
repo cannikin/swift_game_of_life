@@ -25,7 +25,23 @@ class GameScene: SKScene {
   
   var _tiles:Tile[][] = []
   var _margin = 4
-    
+  
+  var _isPlaying = false
+  var _prevTime:CFTimeInterval = 0
+  var _timeCounter:CFTimeInterval = 0
+  
+  var _population:Int = 0 {
+    didSet {
+      _populationValueLabel.text = "\(_population)"
+    }
+  }
+  
+  var _generation:Int = 0 {
+    didSet {
+      _generationValueLabel.text = "\(_generation)"
+    }
+  }
+  
   override func didMoveToView(view: SKView) {
     // background
     let background = SKSpriteNode(imageNamed: "background.png")
@@ -112,12 +128,84 @@ class GameScene: SKScene {
       var selectedTile:Tile? = getTileAtPosition(xPos: Int(touch.locationInNode(self).x), yPos: Int(touch.locationInNode(self).y))
       if let tile = selectedTile {
         tile.isAlive = !tile.isAlive
+        if tile.isAlive {
+          _population++
+        } else {
+          _population--
+        }
+      }
+      if CGRectContainsPoint(_playButton.frame, touch.locationInNode(self)) {
+        playButtonPressed()
+      }
+      if CGRectContainsPoint(_pauseButton.frame, touch.locationInNode(self)) {
+        pauseButtonPressed()
       }
     }
   }
    
   override func update(currentTime: CFTimeInterval) {
-    /* Called before each frame is rendered */
+    if _prevTime == 0 {
+      _prevTime = currentTime
+    }
+    
+    if _isPlaying {
+      _timeCounter += currentTime - _prevTime
+      if _timeCounter > 0.5 {
+        _timeCounter = 0
+        timeStep()
+      }
+    }
+    _prevTime = currentTime
+  }
+  
+  func playButtonPressed() {
+    _isPlaying = true
+  }
+  
+  func pauseButtonPressed() {
+    _isPlaying = false
+  }
+  
+  func timeStep() {
+    countLivingNeighbors()
+    updateCreatures()
+    _generation++
+  }
+  
+  func countLivingNeighbors() {
+    for r in 0.._numRows {
+      for c in 0.._numCols {
+        var numLivingNeighbors = 0
+        for i in (r-1)...(r+1) {
+          for j in (c-1)...(c+1) {
+            if ( !((r == i) && (c == j)) && isValidTile(row: i, column: j) ) {
+              if  _tiles[i][j].isAlive {
+                numLivingNeighbors++
+              }
+            }
+          }
+        }
+        _tiles[r][c].numLivingNeighbors = numLivingNeighbors
+      }
+    }
+  }
+  
+  func updateCreatures() {
+    var numAlive = 0
+    for r in 0.._numRows {
+      for c in 0.._numCols {
+        var tile = _tiles[r][c]
+        if tile.numLivingNeighbors == 3 {
+          tile.isAlive = true
+        } else if tile.numLivingNeighbors < 2 || tile.numLivingNeighbors > 3 {
+          tile.isAlive = false
+        }
+        if tile.isAlive {
+          numAlive++
+        }
+      }
+    }
+    _population = numAlive
   }
   
   func calculateTileSize() -> CGSize {
